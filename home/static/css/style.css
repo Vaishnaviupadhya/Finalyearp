@@ -1,0 +1,468 @@
+html{
+  scroll-behavior: smooth;
+
+}
+body{
+  margin: 0;
+  padding: 0;
+  backdrop-filter: blur(10px);
+  background-image: linear-gradient(#010127,#085ec8);
+ 
+
+}
+#backg{
+width: 100vw;
+height: 110vh; 
+background-size: 100% 100%;
+background-repeat: no-repeat;
+position: relative;
+}
+ul{
+  list-style: none;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+background-image: linear-gradient(45deg, #df4881,#c430d7); 
+    overflow: hidden;
+    text-transform: uppercase;
+    display: block;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: pink;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+   background-color: linear-gradient(45deg, #df4881,#c430d7);
+    color: white;
+  }
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+.bg-img,.bg-img1{
+  
+  height: 100vh;
+  background-size: cover;
+  background-position: right;
+  position: absolute;
+  right:207px;
+  animation:animateForm 5s ease forwards;
+}
+
+.bg-img:after,.bg-img1:after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+}
+.bg-img1{
+  display:none;
+}
+#toggle:checked ~ .bg-img{
+  display:none;
+}
+#toggle:checked ~ .bg-img1{
+  display:block;
+}
+@keyframes animateForm{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+#toggle{
+  appearance:none;
+}
+.content,.c{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  text-align: center;
+  padding: 50px 32px;
+  width: 370px;
+  transform: translate(-50%,-50%);
+  background: rgba(255,255,255,0.04);
+  box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+}
+.content ,.c header{
+  color: white;
+  font-size: 33px;
+  font-weight: 600;
+  margin: 10px;
+  font-family: 'Montserrat',sans-serif;
+}
+.field{
+  position: relative;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  background: rgba(255,255,255,0.94);
+}
+.field1{
+  position: relative;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  background: rgba(255,255,255,0.94);
+}
+.field span{
+  color: #222;
+  width: 35px;
+  line-height: 45px;
+}
+.field1 span{
+  color: #222;
+  width: 35px;
+  line-height: 45px;
+}
+
+.field input{
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #222;
+  font-size: 16px;
+  font-family: 'Poppins',sans-serif;
+}
+
+.field1 label{
+  color: #222;
+
+  font-size: 16px;
+}
+.space{
+  margin-top: 16px;
+}
+.show{
+  position: absolute;
+  right: 13px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+  display: none;
+  cursor: pointer;
+  font-family: 'Montserrat',sans-serif;
+}
+.pass-key:valid ~ .show{
+  display: block;
+}
+.pass{
+  text-align: left;
+  margin: 10px 0;
+}
+.pass a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins',sans-serif;
+}
+.pass:hover a{
+  text-decoration: underline;
+}
+.field input[type="submit"]{
+  background-image: linear-gradient(#FF1053,hsl(332, 82%, 82%));
+  border: 1px solid #2691d9;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Montserrat',sans-serif;
+}
+.field input[type="submit"]:hover{
+  background-image: linear-gradient(#FF1053,hsl(332, 82%, 82%));
+}
+.login{
+  color: white;
+  margin: 20px 0;
+  font-family: 'Poppins',sans-serif;
+}
+.links{
+  display: flex;
+  cursor: pointer;
+  color: white;
+  margin: 0 0 20px 0;
+}
+.signup{
+  font-size: 15px;
+  color: white;
+  font-family: 'Poppins',sans-serif;
+}
+.signup a{
+  background-image: linear-gradient(#FF1053,hsl(332, 82%, 82%));
+  text-decoration: none;
+}
+.signup a:hover{
+  text-decoration: underline;
+}
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  padding: 14px 40px;
+  color: #fff;
+  background-image: linear-gradient(45deg, #df4881,#c430d7);
+  font-size: 14px;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+}
+.content1{
+  margin: top 0;;
+  padding-top: 10%;
+  padding-left: 2%;
+  max-width: 600px;
+}
+.content1 h1{
+  font-size: 70px;
+  color: white;
+
+}
+#services{
+  height: 500px;
+width: 100%;
+}
+#team{
+  height: 700px;
+
+display: inline-block;
+width: 100%;
+}
+
+#contact{
+  height: 100px;
+
+display: inline-block;
+width: 100%;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+
+/* .services {
+    margin: 100px;
+   
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+} */
+
+body1 {
+    display: flex;
+    margin: 100px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ebf5fc;
+}
+
+.container1 {
+    position: relative;
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1100px;
+}
+
+.container1 .card {
+    width: 320px;
+    margin-left: 45px;
+    padding: 40px 30px;
+    background: #ebf5fc;
+    border-radius: 40px;
+    height: 270px;
+    box-shadow: -6px -6px 20px #df4881,6px 6px 20px #c430d7;
+}
+
+.container1 .card:hover {
+    box-shadow: inset -6px -6px 20px #df4881,inset 6px 6px 20px #c430d7;
+}
+
+.container1 .card .imgBx {
+    position: relative;
+    text-align: center;
+}
+
+.container1 .card .imgBx img {
+    max-width: 120px;
+}
+
+.container1 .card .contentBx {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container1 .card .contentBx h1 {
+    
+    color: #df4881;
+    font-weight: 700;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+}
+
+.container1 .card .contentBx p {
+  color: #1929d7;
+}
+
+.container1 .card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 40px;
+    color: #3a9bdc;
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: -4px -4px 15px #df4881,4px 4px 15px #c430d7;
+}
+
+.container1 .card .contentBx a:hover {
+    box-shadow: inset -4px -4px 10px #df4881,inset 4px 4px 10px #c430d7;
+}
+
+.container1 .card a:hover span {
+    display: block;
+    transform: scale(0.98);
+}
+
+.container1 .card:hover .imgBx,.container .card:hover .contentBx {
+    transform: scale(0.98);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.circle{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circle img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display:block;
+  border-radius:50%;
+}

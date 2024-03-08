@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    {%load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{%static 'css/style.css'%}'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src='{%static 'javascript/main.js'%}'></script>
+    <title>Brain disease prediction</title>
+    <style>
+        #backg{
+            background-image:url("{%static 'img/brain.png'%}");
+           
+        }
+    </style>
+</head>
+
+<body > 
+
+    <div class="topnav">
+      <ul>
+         <li> <a class="active" href="#home">Home</a></li>
+         <li><a href="braind">Brain Disorders</a></li>
+         <li><a href="#services">Services</a></li>
+         <li> <a href="#team">Team</a></li>
+         <li><a href="#contact">Contact</a></li>
+      </ul>
+      </div>
+      <div id="backg" >
+        <input type="checkbox" id="toggle">
+        <div class="bg-img" >
+            <div class="content">
+               <header>LOGIN </header>
+               <br>
+               <form action="{% url 'logins' %}" method="POST">
+                  {% csrf_token %}
+                  <div class="field">
+                     <span class="fa fa-user"></span>
+                     <input type="text" name="lemail"required placeholder="Email">
+                  </div>
+                  <div class="field1 space" >
+                     <span class="fa fa-user-md" style="margin-left: -2px;"></span>
+                    <input type="radio" id="pat"name="roles" value="0">
+                    <label for="pat" style="margin-top: 12px;margin-left: 2px;margin-right: 8px;">Patient</label><br>
+                    <input type="radio" id="doc"name="roles" value="1">
+                    <label for="doc"style="margin-top: 12px;margin-left: 2px;margin-right: 8px;">Doctor</label><br>
+                 </div>
+                  <div class="field space">
+                     <span class="fa fa-lock"></span>
+                     <input type="password" name="lpass1"class="pass-key" required placeholder="Password">
+                     <span class="show">SHOW</span>
+                  </div>
+                  <div class="pass" style="font-size: 16px;">
+                     <a href="#">Forgot Password?</a>
+                  </div>
+                  <div class="field">
+                     <input type="submit" style="background-image: linear-gradient(45deg, #df4881,#c430d7);" value="login">
+                  </div>
+               </form>
+               <br>
+               <div class="signup">
+                  Don't have account?
+                  <label for="toggle" style="color:#df4881 ;">Signup Now</label>
+               </div>
+            </div>
+         </div>{%comment%}login component end div{%endcomment%}
+         <div class="bg-img1">
+            <div class="content">
+               <header>Sign Up </header>
+               <br>
+               <form action="{% url 'signup' %}" method="POST">
+                   {% csrf_token %}
+                  <div class="field">
+                     <span class="fa fa-user"></span>
+                     <input type="text" name= "name"required placeholder="Name">
+                  </div>
+                  <div class="field1 space" >
+                     <span class="fa fa-user-md" style="margin-left: -2px;"></span>
+                    <input type="radio" id="pat"name="role" value="0">
+                    <label for="pat" style="margin-top: 12px;margin-left: 2px;margin-right: 8px;" >Patient</label><br>
+                    <input type="radio" id="doc"name="role" value="1">
+                    <label for="doc"style="margin-top: 12px;margin-left: 2px;margin-right: 8px;">Doctor</label><br>
+                 </div>
+                  <div class="field space">
+                     <span class="fa fa-envelope" style="margin-left: 2px;"></span>
+                     <input type="text" name= "uemail" required placeholder="Email">
+                  </div>
+                  <div class="field space">
+                     <span class="fa fa-lock"></span>
+                     <input type="password" class="pass-key" name="pass1" required placeholder="Password">
+                     <span class="show">SHOW</span>
+                  </div>
+                  <div class="field space">
+                     <span class="fa fa-lock"></span>
+                     <input type="password" class="pass-key" name="pass2" required placeholder="Confirm password">
+                     <span class="show">SHOW</span>
+                  </div>
+                 
+                  <div class="field space">
+                     <input type="submit" style="background-image: linear-gradient(45deg, #df4881,#c430d7);" value="Signup">
+                  </div>
+               </form>
+               <br>
+               <div class="signup">
+                  Get back to login?
+                  <label for="toggle" style="color:#df4881;">Login Now</label>
+               </div>
+            </div>
+         </div>
+         <div class="content1">
+            <h1>Brain <br>Disease <br>Predictor</h1>
+            <a href="#services" class="btn">Know more</a>
+         </div>
+ 
+    </div>{%comment%}background end div{%endcomment%}
+
+    <hr style="color: white;height: 2px;">
+    <br><br>
+
+    {%comment%}------------------------------------About section(services)---------------------------------{%endcomment%}
+
+   <div id="services">
+
+      <h1 style="text-align: center;color: white;">We collect CT Images and classify the Neurodegeneracy into three major classes</h1>
+      <h2 style="text-align: center;color: white;">Three major classes are:</h2>
+      <br>
+      <div class="body1">
+         <div class="container1">
+            <div class="card">
+               <div class="imgBx">
+                 
+               </div>
+               <div class="contentBx">
+                  <h1>NORMAL BRAIN</h1>
+                  <br>
+                  <p>"Normal" classification indicates that the brain structure appears typical and healthy.It is associated with individuals without significant neurological disorders or abnormalities.</p>
+                  
+               </div>
+            </div>
+            <div class="card">
+               <div class="imgBx">
+               </div>
+               <div class="contentBx">
+                  <h1>ATROPHIC BRAIN</h1>
+                  <br>
+                  <p>Atrophy refers to the shrinking of brain tissue leading to a reduction in size.It can be a result of aging or neurodegenerative diseases. It may be associated with cognitive decline and functional impairment..</p>
+                
+               </div>
+            </div>
+            <div class="card">
+               <div class="imgBx">
+               </div>
+               <div class="contentBx">
+                  <h1>NEURODEGENERATIVE BRAIN</h1>
+                  
+                  <p> Neurodegenerative diseases involve the progressive degeneration of the structure and function of the nervous system.It includes conditions like Alzheimer's disease, Parkinson's disease, and Huntington's disease.</p>
+                
+               </div>
+            </div>
+         </div>
+        
+      </div>
+      
+      
+   </div>
+<br><br><br>
+   <div id="team">
+      <h1 style="color:white;text-align:center;font-family: 'Arial'">OUR TEAM</h1>
+      <br><br><br><br>
+      <div class=image-container>
+      <div class="circle">
+         <img src="../static/img/imgb5.jpeg" alt="cat">
+     </div>
+     <div class="circle">
+      <img src="../static/img/imgb2.jpg"  alt="cat">
+  </div>
+  <div class="circle">
+   <img src="../static/img/imgb3.jpg"  alt="cat">
+</div>
+<div class="circle">
+   <img src="../static/img/imgb4.jpg"  alt="cat">
+</div>
+</div>
+   </div>
+   <div id="contact">
+      <h1>this is contact section</h1>
+   </div>
+   <div id="contact">
+   <footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><a href="#">about us</a></li>
+  	 				<li><a href="#">our services</a></li>
+  	 				<li><a href="#">privacy policy</a></li>
+  	 				
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>get help</h4>
+  	 			<ul>
+  	 				<li><a href="#">FAQ</a></li>
+  	 				<li><a href="#">Appointment details</a></li>
+  	 				<li><a href="#">Report status</a></li>
+  	 				<li><a href="#">Payment status</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="fab fa-twitter"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </footer>
+</div>
+    <script>
+        const pass_field = document.querySelector('.pass-key');
+        const showBtn = document.querySelector('.show');
+        showBtn.addEventListener('click', function(){
+         if(pass_field.type === "password"){
+           pass_field.type = "text";
+           showBtn.textContent = "HIDE";
+           showBtn.style.color = "#3498db";
+         }else{
+           pass_field.type = "password";
+           showBtn.textContent = "SHOW";
+           showBtn.style.color = "#222";
+         }
+        });
+     </script>
+</body>
+</html>
