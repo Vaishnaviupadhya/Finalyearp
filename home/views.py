@@ -4,6 +4,8 @@ from home.models import CustomUser
 from django.contrib.auth import login,authenticate,logout
 # Create your views here.
 from django.http import HttpResponse
+from django.contrib import messages
+
 
 def home(request):
     return render(request, "index.html")
@@ -89,6 +91,9 @@ def signup(request):
         user_type = int(request.POST.get('role'))
         pass1 = request.POST.get('pass1')
         pass2 = request.POST.get('pass2')
+        # if len(pass1) < 8:
+        #     messages.error(request, 'Password must be at least 8 characters long.')
+        #     return redirect('home') 
 
         # Create the user with email instead of username
         my_user = CustomUser.objects.create_user(email=uemail, password=pass1, name=uname, type=user_type)
