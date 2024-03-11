@@ -28,6 +28,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# settings.py
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'your_smtp_host'
+# EMAIL_PORT = your_smtp_port
+# EMAIL_USE_TLS = True  # Or False if not using TLS
+# EMAIL_HOST_USER = 'your_email@example.com'
+# EMAIL_HOST_PASSWORD = 'your_email_password'
 
 # Application definition
 
@@ -93,7 +101,7 @@ DATABASES = {
 #     'django.contrib.auth.backends.ModelBackend',
 # ]
 
-AUTH_USER_MODEL = 'home.CustomUser'
+# AUTH_USER_MODEL = 'home.CustomUser'
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -134,3 +142,12 @@ STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# settings.py
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # Change if you are using a different email provider
+EMAIL_PORT = 587  # For TLS, use 465 for SSL
+EMAIL_USE_TLS = True  # Or use EMAIL_USE_SSL = True for SSL
+EMAIL_HOST_USER = ''  # Your email address
+EMAIL_HOST_PASSWORD = ''  # Your email app password
